@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.3.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+}
+
+group 'com.micro.cosmic'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven {
+        url 'http://47.93.118.158:9001/repository/breeze-literacy-group/'
+        credentials {
+            username = "admin"
+            password = "breezeliteracy"
+        }
+    }
+    mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR7"
+        mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:2.2.1.RELEASE"
+    }
+}
+
+dependencies {
+    /*implementation project(':rpc-media-api')*/
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation 'com.alibaba.cloud:spring-cloud-starter-dubbo'
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel'
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+
+    runtimeOnly 'mysql:mysql-connector-java'
+    implementation 'com.alibaba:druid-spring-boot-starter:1.2.1'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.4.0'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    implementation 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+}

@@ -1,0 +1,5 @@
+/.gradle/
+/build/
+/rest-media-api/build/
+/rpc-media-api/build/
+/.idea/

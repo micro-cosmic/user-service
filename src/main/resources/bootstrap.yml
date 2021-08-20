@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        namespace: dev
+        group: DEFAULT_GROUP
+        file-extension: yaml
+        server-addr: http://123.57.5.68:8848
+        shared-configs:
+          - data-id: nacos.yaml
+            group: DEFAULT_GROUP
+            refresh: false
+#          - data-id: sentinel.yaml
+#            group: DEFAULT_GROUP
+#            refresh: false
+#          - data-id: mysql.yaml
+#            group: DEFAULT_GROUP
+#            refresh: false
+#          - data-id: redis.yaml
+#            group: DEFAULT_GROUP
+#            refresh: false

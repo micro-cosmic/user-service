@@ -37,10 +37,10 @@ dependencies {
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
 //
-//    runtimeOnly 'mysql:mysql-connector-java'
-//    implementation 'com.alibaba:druid-spring-boot-starter:1.2.1'
-//    implementation 'com.baomidou:mybatis-plus-boot-starter:3.4.0'
-//
+    runtimeOnly 'mysql:mysql-connector-java'
+    implementation 'com.alibaba:druid-spring-boot-starter:1.2.1'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
 //    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 
     implementation 'org.projectlombok:lombok'

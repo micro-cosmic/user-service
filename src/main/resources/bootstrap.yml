@@ -13,9 +13,9 @@ spring:
 #          - data-id: sentinel.yaml
 #            group: DEFAULT_GROUP
 #            refresh: false
-#          - data-id: mysql.yaml
-#            group: DEFAULT_GROUP
-#            refresh: false
+          - data-id: mysql.yaml
+            group: DEFAULT_GROUP
+            refresh: false
 #          - data-id: redis.yaml
 #            group: DEFAULT_GROUP
 #            refresh: false

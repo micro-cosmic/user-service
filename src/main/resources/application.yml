@@ -1,9 +1,7 @@
 spring:
   application:
     name: user-service
-logging:
-  level:
-    root: info
-
 server:
   port: 8080
+mybatis:
+  mapperLocations: classpath:mapper/*.xml

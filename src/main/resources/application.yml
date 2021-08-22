@@ -5,9 +5,3 @@ server:
   port: 8080
 mybatis:
   mapperLocations: classpath:mapper/*.xml
-
-rocketmq:
-  name-server: 123.57.5.68:9876;123.57.193.37:9876;
-  producer:
-    group: ${spring.application.name}
-    send-message-timeout: 30000

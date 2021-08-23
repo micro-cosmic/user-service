@@ -26,7 +26,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/getUser")
-    public String getUser() {
+    public String getUser(Integer userId) {
         return userService.getUser(userConfig.getUserId());
     }
 }

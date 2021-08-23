@@ -1,3 +1,4 @@
 rootProject.name = 'user-service'
 include 'rest-user-api'
+include 'rpc-user-api'
 

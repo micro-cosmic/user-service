@@ -10,11 +10,18 @@ version '1.0-SNAPSHOT'
 repositories {
     maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
     maven {
-        url 'http://47.93.118.158:9001/repository/breeze-literacy-group/'
         credentials {
-            username = "admin"
-            password = "breezeliteracy"
+            username 'ghMPet'
+            password 'NFC0saBp3Y'
         }
+        url 'https://repo.rdc.aliyun.com/repository/138485-release-qvPQLQ/'
+    }
+    maven {
+        credentials {
+            username 'ghMPet'
+            password 'NFC0saBp3Y'
+        }
+        url 'https://repo.rdc.aliyun.com/repository/138485-snapshot-MKnbhe/'
     }
     mavenCentral()
 }
@@ -49,3 +56,4 @@ dependencies {
     implementation 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 }
+

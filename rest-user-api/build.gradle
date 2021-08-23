@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+    id 'maven'
+}
+
+version '0.0.1-SNAPSHOT'
+group 'com.micro.cosmic'
+def artifactId = 'rest-user-api'
+jar.enabled = true
+
+repositories {
+    mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR3"
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+}
+
+def getRepositoryUrl() {
+    return version.toUpperCase().contains("SNAPSHOT") == false
+            ? 'https://repo.rdc.aliyun.com/repository/138485-release-qvPQLQ/'
+            : 'https://repo.rdc.aliyun.com/repository/138485-snapshot-MKnbhe/'
+}
+//上传到nexus
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: getRepositoryUrl()) {
+                authentication(userName: "ghMPet", password: "NFC0saBp3Y")
+            }
+            pom.groupId = "$project.group"
+            pom.version = "$project.version"
+            pom.artifactId = artifactId
+        }
+    }
+}

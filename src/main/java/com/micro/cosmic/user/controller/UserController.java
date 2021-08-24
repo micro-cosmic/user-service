@@ -18,7 +18,6 @@ import javax.annotation.Resource;
  */
 @Slf4j
 @RestController
-@RequestMapping("/user")
 public class UserController {
     @Autowired
     private UserConfig userConfig;

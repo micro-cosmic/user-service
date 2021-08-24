@@ -5,7 +5,7 @@ plugins {
     id 'maven'
 }
 
-version '0.0.4-SNAPSHOT'
+version '0.0.1-SNAPSHOT'
 group 'com.micro.cosmic'
 def artifactId = 'rpc-user-api'
 jar.enabled = true

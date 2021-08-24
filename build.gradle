@@ -34,7 +34,7 @@ dependencyManagement {
 }
 
 dependencies {
-    /*implementation project(':rpc-media-api')*/
+    implementation project(':rpc-user-api')
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

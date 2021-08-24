@@ -22,3 +22,6 @@ spring:
           - data-id: rocketmq.yaml
             group: DEFAULT_GROUP
             refresh: false
+          - data-id: dubbo.yaml
+            group: DEFAULT_GROUP
+            refresh: false

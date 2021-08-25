@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 2021/8/23
  * @description
  */
-@RequestMapping("/user")
 @FeignClient(value = "user-service", fallback = RestUserServiceFallBack.class)
 public interface RestUserService {
     /**
